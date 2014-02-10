@@ -88,11 +88,6 @@ var x1 = d3.scale.log();
 var y = d3.scale.ordinal()
     .rangeRoundBands([0, height], .3, .15);
 
-//var color = d3.scale.ordinal()
-//    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
-var color = d3.scale.category10();
-
 var gramColor = {
   positive: "#531F96",
   negative: "#9E2779"
@@ -125,8 +120,6 @@ d3.csv("a1-burtin.csv", function(error, data) {
   });
 
   data.sort(function(a, b){ return d3.descending(a["Gram Staining"] + a.Bacteria, b["Gram Staining"] + b.Bacteria); }).reverse()
-
-  console.log(data);
 
   y.domain(data.map(function(d) { return d.Bacteria; }));
   x0.domain(antibiotics);
@@ -208,7 +201,7 @@ d3.csv("a1-burtin.csv", function(error, data) {
         return d.value < threshold ? color : color.brighter(2)
       });
 
-  var minWidth = 40;
+  var minWidth = 30;
   bacEnter.append("text")
       .attr("x", function(d) {
         var diff = 5
