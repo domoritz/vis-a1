@@ -1,5 +1,7 @@
 # Visualization Assignment 1
 
+Check it out at https://domoritz.github.com/vis-a1.
+
 # Description
 
 My visualization shows the efficiency of three antibiotics based on Burtin's antibiotics data. For each bacterium in the dataset, it shows the effectiveness measured as the inverted minimum inhibitory concentration (MIC). The bacteria are grouped by gram negative and gram positive. I decided to use a horizontal bar chart for each antibiotic. Grouping by bacterium would have made it difficult to compare effectiveness of an antibiotic. A horizontal visualization used the space more efficiently (a visualization that is wider that high usually fits better).
